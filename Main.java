@@ -7,7 +7,7 @@ public class Main {
         numbers.insert(20);
         numbers.insert(30);
         numbers.insert(40);
-        System.out.println(numbers.indexOf(30));
+        System.out.println(numbers.indexOf(30) +".");
         numbers.print();
         numbers.removeAt(0);
         numbers.print();
