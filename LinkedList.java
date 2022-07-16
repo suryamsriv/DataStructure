@@ -101,6 +101,49 @@ public class LinkedList {
         return array;
     }
 
+    public void reverseList() {
+        if(first == last) {
+            return;
+        }
+        
+        var previous = first;
+        var current = first.next;
+        while(current != null) {
+            var next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        last = first;
+        last.next = null;
+        first = previous;
+    }
+
+    public int getKthNode(int position) {
+
+        if(isEmpty())
+            throw new IllegalStateException();
+
+        var p1 = first;
+        var p2 = first;
+        int count = 0;
+        
+        while(count < position) {
+            if(p2 == null) 
+                throw new IllegalArgumentException();
+            p2 = p2.next;
+            count++;
+        }
+
+        while(p2 != last) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        
+        return p1.value;
+    }
+
     private boolean isEmpty() {
         return first == null;
     }
