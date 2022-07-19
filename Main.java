@@ -4,13 +4,17 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
 
+//M implementation if brackets are balanced or not
+        Expression exp = new Expression();
+        System.out.println(exp.isBalanced("([]<{}{}><><><><><>.1+2)"));
+
 // Checking if brackets are balanced or not
-        BalancedExpression be = new BalancedExpression();
-        Boolean b =  be.isBalanced("([]<1+>2)");
-        if(b)
-                System.out.println("Balanced");
-        else
-                System.out.println("NOT Balanced");
+        // BalancedExpression be = new BalancedExpression();
+        // Boolean b =  be.isBalanced("([]<1+>2)");
+        // if(b)
+        //         System.out.println("Balanced");
+        // else
+        //         System.out.println("NOT Balanced");
 
 
 //M implementation for Reversing the string
