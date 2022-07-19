@@ -4,10 +4,19 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
 
-        //M implementation for Reversing the string
-        StringReverser reverser = new StringReverser();
-        var result = reverser.reverse("input");
-        System.out.println(result);
+// Checking if brackets are balanced or not
+        BalancedExpression be = new BalancedExpression();
+        Boolean b =  be.isBalanced("([]<1+>2)");
+        if(b)
+                System.out.println("Balanced");
+        else
+                System.out.println("NOT Balanced");
+
+
+//M implementation for Reversing the string
+        // StringReverser reverser = new StringReverser();
+        // var result = reverser.reverse("input");
+        // System.out.println(result);
 
         
         // MyStack myStack = new MyStack();
