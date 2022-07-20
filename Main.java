@@ -1,12 +1,20 @@
 import java.util.Arrays;
-import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
 
+// M implementation of Stack using array
+        Stack stack = new Stack();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        
+        System.out.println(stack.peek());   
+
+
 //M implementation if brackets are balanced or not
-        Expression exp = new Expression();
-        System.out.println(exp.isBalanced("([]<{}{}><><><><><>.1+2)"));
+        // Expression exp = new Expression();
+        // System.out.println(exp.isBalanced("([]<{}{}><><><><><>.1+2)"));
 
 // Checking if brackets are balanced or not
         // BalancedExpression be = new BalancedExpression();
