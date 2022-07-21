@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Stack {
+public class StackM {
     private int[] items = new int[5];
     private int count;
 

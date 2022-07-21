@@ -1,6 +1,6 @@
 import java.util.*;
 public class MyStack {
-    Stack<Character> stack = new Stack();
+    StackM<Character> stack = new StackM();
     
     public void addToStack(String str)
     {

@@ -1,15 +1,28 @@
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
 
+        //M implementation of reversing a queue using array
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+        queue.add(40);
+        System.out.println("Original: " + queue);
+        new MyQueue().reverse(queue);
+        System.out.println("Reversed: " + queue);
+
+
 // M implementation of Stack using array
-        Stack stack = new Stack();
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
+        // StackM stack = new StackM();
+        // stack.push(10);
+        // stack.push(20);
+        // stack.push(30);
         
-        System.out.println(stack.peek());   
+        // System.out.println(stack.peek());   
 
 
 //M implementation if brackets are balanced or not
