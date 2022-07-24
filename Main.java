@@ -5,16 +5,24 @@ import java.util.Queue;
 public class Main {
     public static void main(String[] args) {
 
-        MyQueue que = new MyQueue();
-        que.enqueue(10);
-        que.enqueue(20);
-        que.enqueue(30);
-        System.out.println(que);
-        System.out.println(que.dequeue());
-        System.out.println(que.dequeue());
-        System.out.println(que.dequeue());
-        System.out.println(que.dequeue());
-        System.out.println(que);
+       // Q with 2 stacks
+        QueueWithTwoStacks queue = new QueueWithTwoStacks();
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.dequeue();
+        var first = queue.dequeue();
+        System.out.println(first);
+        // MyQueue que = new MyQueue();
+        // que.enqueue(10);
+        // que.enqueue(20);
+        // que.enqueue(30);
+        // System.out.println(que);
+        // System.out.println(que.dequeue());
+        // System.out.println(que.dequeue());
+        // System.out.println(que.dequeue());
+        // System.out.println(que.dequeue());
+        // System.out.println(que);
 
         // //M implementation of reversing a queue using array
         // Queue<Integer> queue = new ArrayDeque<>();
