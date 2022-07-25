@@ -5,7 +5,10 @@ import java.util.Queue;
 public class Main {
     public static void main(String[] args) {
 
-        
+        //HashTable: Finding first not repeating character
+        FirstNonRepeatingChar str = new FirstNonRepeatingChar("a green apple");
+        System.out.println(str.findFirstNonRepeatingChar("a ggreen apple"));
+
         // PriorityQueue pq = new PriorityQueue();
         // pq.pEnqueue(10);
         // pq.pEnqueue(30);
