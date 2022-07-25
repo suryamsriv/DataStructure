@@ -5,14 +5,25 @@ import java.util.Queue;
 public class Main {
     public static void main(String[] args) {
 
+        
+        // PriorityQueue pq = new PriorityQueue();
+        // pq.pEnqueue(10);
+        // pq.pEnqueue(30);
+        // pq.pEnqueue(20);
+        // pq.pEnqueue(15);
+        // System.out.println(pq);
+        // while(! pq.isEmpty()) {
+        //         System.out.println(pq.remove());
+        // }
+
        // Q with 2 stacks
-        QueueWithTwoStacks queue = new QueueWithTwoStacks();
-        queue.enqueue(10);
-        queue.enqueue(20);
-        queue.enqueue(30);
-        queue.dequeue();
-        var first = queue.dequeue();
-        System.out.println(first);
+        // QueueWithTwoStacks queue = new QueueWithTwoStacks();
+        // queue.enqueue(10);
+        // queue.enqueue(20);
+        // queue.enqueue(30);
+        // queue.dequeue();
+        // var first = queue.dequeue();
+        // System.out.println(first);
         // MyQueue que = new MyQueue();
         // que.enqueue(10);
         // que.enqueue(20);
