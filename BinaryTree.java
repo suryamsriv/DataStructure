@@ -40,16 +40,18 @@ public class BinaryTree {
         }
     }
 
-    public boolean find(int item) {
-        var current = node;
+    public boolean find(int value) {
+        var current = root;
         while(current != null) {
-            if(current.value == item)
+            if(current.value == value)
                 return true;
 
-            if (current.value < item) 
+            if (value < current.value) 
                 current = current.leftChild;
-            else 
+            else if(value > current.value)
                 current = current.rightChild;
+            else
+                return true;
         }
         return false;
     }
