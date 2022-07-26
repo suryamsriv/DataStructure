@@ -1,6 +1,6 @@
 import java.util.NoSuchElementException;
 
-public class LinkedList {
+public class MyLinkedList {
 
     private class Node {
         private int value;
