@@ -5,9 +5,25 @@ import java.util.Queue;
 public class Main {
     public static void main(String[] args) {
 
+
+        
+
+//HashMap implementation
+        // MyHashTable table = new MyHashTable();
+        // table.put(6, "A");
+        // table.put(8, "B");
+        // table.put(11, "C");
+        // table.put(6, "A+");
+        // table.remove(6);
+        // System.out.println(table.get(6));
+        
+        //HashSet: Finding first repeating character
+        // FirstRepeatingChar obj = new FirstRepeatingChar();
+        // System.out.println(obj.firstRepeatingCharacter("a green apple"));
+
         //HashTable: Finding first not repeating character
-        FirstNonRepeatingChar str = new FirstNonRepeatingChar("a green apple");
-        System.out.println(str.findFirstNonRepeatingChar("a ggreen apple"));
+        // FirstNonRepeatingChar str = new FirstNonRepeatingChar("a green apple");
+        // System.out.println(str.findFirstNonRepeatingChar("a ggreen apple"));
 
         // PriorityQueue pq = new PriorityQueue();
         // pq.pEnqueue(10);
