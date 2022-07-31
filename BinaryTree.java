@@ -76,4 +76,46 @@ public class BinaryTree {
         traversePreOrder(root.leftChild);
         traversePreOrder(root.rightChild);
     }
+
+    public void traverseInOrder() {
+        traverseInOrder(root);
+    }
+
+    private void traverseInOrder(Node root) {
+        if (root == null)
+            return;
+
+        System.out.print("Node: " + root.value);
+        if (root.leftChild != null) {
+            System.out.print(" LC: " + root.leftChild.value);
+        }
+        if (root.rightChild != null) {
+            System.out.print(" RC: " + root.rightChild.value);
+        }
+        System.out.println();
+        traverseInOrder(root.leftChild);
+        System.out.println(root.value);
+        traverseInOrder(root.rightChild);
+    }
+
+    public void traversePostOrder() {
+        traversePostOrder(root);
+    }
+
+    private void traversePostOrder(Node root) {
+        if (root == null)
+            return;
+
+        System.out.print("Node: " + root.value);
+        if (root.leftChild != null) {
+            System.out.print(" LC: " + root.leftChild.value);
+        }
+        if (root.rightChild != null) {
+            System.out.print(" RC: " + root.rightChild.value);
+        }
+        System.out.println();
+        traversePostOrder(root.leftChild);
+        traversePostOrder(root.rightChild);
+        System.out.println(root.value);
+    }
 }
