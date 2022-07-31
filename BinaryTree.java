@@ -170,4 +170,39 @@ public class BinaryTree {
         return (node.leftChild == null && node.rightChild == null);
     }
 
+    public boolean equals(BinaryTree other) {
+        if (other == null)
+            return false;
+        return equals(root, other.root);
+
+    }
+
+    private boolean equals(Node first, Node second) {
+
+        if (first == null && second == null)
+            return true;
+
+        if (first != null && second != null)
+            return first.value == second.value
+                    && equals(first.leftChild, second.leftChild)
+                    && equals(first.rightChild, second.rightChild);
+
+        return false;
+    }
+
+    public boolean isBinarySearchTree() {
+        return isBinarySearchTree(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+    private boolean isBinarySearchTree(Node root, int min, int max) {
+        if (root == null)
+            return true;
+
+        if (root.value < min || root.value > max)
+            return false;
+
+        return isBinarySearchTree(root.leftChild, min, root.value - 1)
+                && isBinarySearchTree(root.rightChild, root.value + 1, max);
+
+    }
 }
