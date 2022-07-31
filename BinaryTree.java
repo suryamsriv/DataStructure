@@ -133,10 +133,29 @@ public class BinaryTree {
         return 1 + Math.max(height(root.leftChild), height(root.rightChild));
     }
 
+    public int minBST() {
+        return minBST(root);
+    }
+
+    // O(logn), as half of the tree is getting elimitated in every iteration
+    private int minBST(Node root) {
+        if (root == null)
+            throw new IllegalStateException();
+
+        var current = root;
+        var last = current;
+        while (current != null) {
+            last = current;
+            current = current.leftChild;
+        }
+        return last.value;
+    }
+
     public int min() {
         return min(root);
     }
 
+    // O(n) for search min in binary tree
     private int min(Node root) {
         if (isLeaf(root))
             return root.value;
