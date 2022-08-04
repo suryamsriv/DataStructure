@@ -12,7 +12,7 @@ public class Main {
                 tree.insert(1);
                 tree.insert(6);
                 tree.insert(8);
-                tree.insert(10);
+                tree.insert(11);
                 // System.out.println(tree.find(1));
                 // tree.traversePostOrder();
 
