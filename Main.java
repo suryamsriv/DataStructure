@@ -5,14 +5,18 @@ import java.util.Queue;
 public class Main {
         public static void main(String[] args) {
 
-                BinaryTree tree = new BinaryTree();
-                tree.insert(7);
-                tree.insert(4);
-                tree.insert(9);
-                tree.insert(1);
-                tree.insert(6);
-                tree.insert(8);
-                tree.insert(11);
+                AVLTree tree = new AVLTree();
+                tree.insert(30);
+                tree.insert(10);
+                tree.insert(20);
+                // BinaryTree tree = new BinaryTree();
+                // tree.insert(7);
+                // tree.insert(4);
+                // tree.insert(9);
+                // tree.insert(1);
+                // tree.insert(6);
+                // tree.insert(8);
+                // tree.insert(11);
                 // System.out.println(tree.find(1));
                 // tree.traversePostOrder();
 
@@ -22,7 +26,7 @@ public class Main {
                 // for (var item : list)
                 // System.out.println(item);
 
-                tree.traverseLevelOrder();
+                // tree.traverseLevelOrder();
                 // HashMap implementation
                 // MyHashTable table = new MyHashTable();
                 // table.put(6, "A");
