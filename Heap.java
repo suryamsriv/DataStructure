@@ -11,12 +11,19 @@ public class Heap {
         bubbleUp();
     }
 
-    public void remove() {
+    public int remove() {
         if (isEmpty())
             throw new IllegalStateException();
 
+        var root = items[0];
         items[0] = items[--size];
 
+        bubbleDown();
+
+        return root;
+    }
+
+    private void bubbleDown() {
         // item(root) < children - Bubble down
         var index = 0;
         while (index <= size && !isValidParent(index)) {
