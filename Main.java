@@ -5,8 +5,17 @@ import java.util.Queue;
 public class Main {
         public static void main(String[] args) {
 
-                int numbers[] = { 5, 3, 8, 4, 1, 2 };
-                System.out.println(MaxHeap.getKthLargest(numbers, 6));
+                // Trie
+                var trie = new Trie();
+                trie.insert("cat");
+                trie.insert("can");
+                System.out.println("Done");
+                System.out.println(trie.contains("cat"));
+                System.out.println(trie.contains("can"));
+                System.out.println(trie.contains("canada"));
+
+                // int numbers[] = { 5, 3, 8, 4, 1, 2 };
+                // System.out.println(MaxHeap.getKthLargest(numbers, 6));
                 // MaxHeap.heapify(numbers);
                 // System.out.println(Arrays.toString(numbers));
 
