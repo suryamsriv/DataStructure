@@ -7,12 +7,22 @@ public class Main {
 
                 // Trie
                 var trie = new Trie();
-                trie.insert("cat");
-                trie.insert("can");
-                System.out.println("Done");
-                System.out.println(trie.contains("cat"));
-                System.out.println(trie.contains("can"));
-                System.out.println(trie.contains("canada"));
+                trie.insert("car");
+                trie.insert("card");
+                trie.insert("care");
+                trie.insert("careful");
+                trie.insert("egg");
+                // System.out.println("Done");
+                // System.out.println(trie.contains("cat"));
+                // System.out.println(trie.contains("can"));
+                // System.out.println(trie.contains("canada"));
+                // trie.traverse();
+                // trie.remove("car");
+                // System.out.println(trie.contains("car"));
+                // System.out.println(trie.contains("care"));
+
+                var words = trie.findWords("care");
+                System.out.println(words);
 
                 // int numbers[] = { 5, 3, 8, 4, 1, 2 };
                 // System.out.println(MaxHeap.getKthLargest(numbers, 6));
