@@ -5,13 +5,23 @@ import java.util.Queue;
 public class Main {
         public static void main(String[] args) {
 
+                // Graph
+                var graph = new Graph();
+                graph.addNode("A");
+                graph.addNode("B");
+                graph.addNode("C");
+                graph.addEdge("A", "B");
+                graph.addEdge("A", "C");
+                graph.removeEdge("A", "C");
+                graph.print();
+
                 // Trie
-                var trie = new Trie();
-                trie.insert("car");
-                trie.insert("card");
-                trie.insert("care");
-                trie.insert("careful");
-                trie.insert("egg");
+                // var trie = new Trie();
+                // trie.insert("car");
+                // trie.insert("card");
+                // trie.insert("care");
+                // trie.insert("careful");
+                // trie.insert("egg");
                 // System.out.println("Done");
                 // System.out.println(trie.contains("cat"));
                 // System.out.println(trie.contains("can"));
@@ -20,9 +30,8 @@ public class Main {
                 // trie.remove("car");
                 // System.out.println(trie.contains("car"));
                 // System.out.println(trie.contains("care"));
-
-                var words = trie.findWords("care");
-                System.out.println(words);
+                // var words = trie.findWords("care");
+                // System.out.println(words);
 
                 // int numbers[] = { 5, 3, 8, 4, 1, 2 };
                 // System.out.println(MaxHeap.getKthLargest(numbers, 6));
