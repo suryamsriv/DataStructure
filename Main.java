@@ -1,3 +1,4 @@
+import java.nio.file.attribute.GroupPrincipal;
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Queue;
@@ -6,14 +7,22 @@ public class Main {
         public static void main(String[] args) {
 
                 // Graph
-                var graph = new Graph();
+                var graph = new MyGraph();
                 graph.addNode("A");
                 graph.addNode("B");
                 graph.addNode("C");
+                graph.addNode("D");
                 graph.addEdge("A", "B");
+                graph.addEdge("B", "D");
+                graph.addEdge("D", "C");
                 graph.addEdge("A", "C");
-                graph.removeEdge("A", "C");
-                graph.print();
+                // graph.removeEdge("B", "D");
+                // graph.removeNode("C");
+                // graph.print();
+                // graph.traverseDepthFirst("G");
+                // graph.removeEdge("A", "C");
+                // graph.print();
+                // graph.traverseDepthFirst("A");
 
                 // Trie
                 // var trie = new Trie();
