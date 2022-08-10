@@ -19,7 +19,7 @@ public class Main {
                 // graph.removeEdge("B", "D");
                 // graph.removeNode("C");
                 // graph.print();
-                // graph.traverseDepthFirst("G");
+                graph.traverseDepthFirst("A");
                 // graph.removeEdge("A", "C");
                 // graph.print();
                 // graph.traverseDepthFirst("A");
