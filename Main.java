@@ -6,23 +6,45 @@ import java.util.Queue;
 public class Main {
         public static void main(String[] args) {
 
-                // Graph
+                // Has Cycle
                 var graph = new MyGraph();
                 graph.addNode("A");
                 graph.addNode("B");
                 graph.addNode("C");
-                graph.addNode("D");
                 graph.addEdge("A", "B");
-                graph.addEdge("B", "D");
-                graph.addEdge("D", "C");
-                graph.addEdge("A", "C");
+                graph.addEdge("B", "C");
+                graph.addEdge("C", "A");
+                System.out.println(graph.hasCycle());
+                // Topological Sort
+
+                // graph.addNode("X");
+                // graph.addNode("A");
+                // graph.addNode("B");
+                // graph.addNode("P");
+                // graph.addEdge("X", "A");
+                // graph.addEdge("X", "B");
+                // graph.addEdge("A", "P");
+                // graph.addEdge("B", "P");
+                // var list = graph.topologicalSort();
+                // System.out.println(list);
+                // Graph
+                // var graph = new MyGraph();
+                // graph.addNode("A");
+                // graph.addNode("B");
+                // graph.addNode("C");
+                // graph.addNode("D");
+                // graph.addEdge("A", "B");
+                // graph.addEdge("B", "D");
+                // graph.addEdge("D", "C");
+                // graph.addEdge("A", "C");
                 // graph.removeEdge("B", "D");
                 // graph.removeNode("C");
                 // graph.print();
-                // graph.traverseDepthFirst("G");
+                // graph.traverseDepthFirst("A");
                 // graph.removeEdge("A", "C");
                 // graph.print();
                 // graph.traverseDepthFirst("A");
+                // graph.traverseBreadthFirst("A");
 
                 // Trie
                 // var trie = new Trie();
