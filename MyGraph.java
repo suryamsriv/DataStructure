@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -6,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class Graph {
+public class MyGraph {
     private class Node {
         private String label;
 
@@ -21,6 +20,7 @@ public class Graph {
     }
 
     private Map<String, Node> nodes = new HashMap<>();
+
     private Map<Node, List<Node>> adjacencyList = new HashMap<>();
 
     public void addNode(String label) {
@@ -44,8 +44,9 @@ public class Graph {
     public void print() {
         for (var source : adjacencyList.keySet()) {
             var targets = adjacencyList.get(source);
-            if (!targets.isEmpty())
-                System.out.print(source + " is connected to " + targets);
+            if (!targets.isEmpty()) {
+                System.out.println(source + " is connected to " + targets);
+            }
         }
     }
 
@@ -54,9 +55,9 @@ public class Graph {
         if (node == null)
             return;
 
-        for (var n : adjacencyList.keySet())
+        for (var n : adjacencyList.keySet()) {
             adjacencyList.get(n).remove(node);
-
+        }
         adjacencyList.remove(node);
         nodes.remove(node);
     }
@@ -75,7 +76,6 @@ public class Graph {
         var node = nodes.get(root);
         if (node == null)
             return;
-
         traverseDepthFirst(node, new HashSet<>());
     }
 
