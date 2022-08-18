@@ -16,6 +16,7 @@ public class Main {
 
                 var path = graph.getShortestPath("A", "C");
                 System.out.println(path);
+                System.out.println(graph.hasCycle());
                 // Has Cycle
                 // var graph = new MyGraph();
                 // graph.addNode("A");
