@@ -7,9 +7,12 @@ public class Main {
         public static void main(String[] args) {
 
                 int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
-                var sorter = new BubbleSort();
+                var sorter = new MergeSort();
                 sorter.sort(numbers);
                 System.out.println(Arrays.toString(numbers));
+                // var sorter = new BubbleSort();
+                // sorter.sort(numbers);
+                // System.out.println(Arrays.toString(numbers));
                 // var graph = new WeightedGraph();
                 // graph.addNode("A");
                 // graph.addNode("B");
