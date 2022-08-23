@@ -6,10 +6,14 @@ import java.util.Queue;
 public class Main {
         public static void main(String[] args) {
 
-                int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
-                var sorter = new BucketSort();
-                sorter.sort(numbers, 3);
-                System.out.println(Arrays.toString(numbers));
+                var search = new Search();
+                int numbers[] = { 7, 1, 3, 6, 5 };
+                var index = search.binarySearch(numbers, 3);
+                System.out.println(index);
+                // int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
+                // var sorter = new BucketSort();
+                // sorter.sort(numbers, 3);
+                // System.out.println(Arrays.toString(numbers));
                 // var sorter = new BubbleSort();
                 // sorter.sort(numbers);
                 // System.out.println(Arrays.toString(numbers));
