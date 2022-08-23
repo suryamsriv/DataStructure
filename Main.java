@@ -8,7 +8,7 @@ public class Main {
 
                 var search = new Search();
                 int numbers[] = { 7, 1, 3, 6, 5 };
-                var index = search.linearSearch(numbers, 6);
+                var index = search.binarySearch(numbers, 3);
                 System.out.println(index);
                 // int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
                 // var sorter = new BucketSort();
