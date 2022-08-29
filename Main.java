@@ -6,6 +6,8 @@ import java.util.Queue;
 public class Main {
         public static void main(String[] args) {
 
+                int count = StringUtils.countVowels("Hello World");
+                System.out.println(count);
                 // var search = new Search();
                 // int numbers[] = { 7, 1, 3, 6, 5 };
                 // var index = search.exponentialSearch(numbers, 3);
