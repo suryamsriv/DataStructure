@@ -6,10 +6,10 @@ import java.util.Queue;
 public class Main {
         public static void main(String[] args) {
 
-                var search = new Search();
-                int numbers[] = { 7, 1, 3, 6, 5 };
-                var index = search.jumpSearch(numbers, 33);
-                System.out.println(index);
+                // var search = new Search();
+                // int numbers[] = { 7, 1, 3, 6, 5 };
+                // var index = search.exponentialSearch(numbers, 3);
+                // System.out.println(index);
                 // int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
                 // var sorter = new BucketSort();
                 // sorter.sort(numbers, 3);
