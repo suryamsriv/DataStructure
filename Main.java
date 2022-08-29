@@ -8,7 +8,7 @@ public class Main {
 
                 var search = new Search();
                 int numbers[] = { 7, 1, 3, 6, 5 };
-                var index = search.ternarySearch(numbers, 3);
+                var index = search.jumpSearch(numbers, 33);
                 System.out.println(index);
                 // int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
                 // var sorter = new BucketSort();
