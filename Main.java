@@ -9,6 +9,7 @@ public class Main {
                 int count = StringUtils.countVowels("Hello World");
                 System.out.println(StringUtils.reverse("Hello"));
                 System.out.println(StringUtils.reverseWords("Trees are beautiful"));
+                System.out.println(StringUtils.areRotations("ABCD", "DABC"));
                 // var search = new Search();
                 // int numbers[] = { 7, 1, 3, 6, 5 };
                 // var index = search.exponentialSearch(numbers, 3);
