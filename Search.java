@@ -12,8 +12,8 @@ public class Search {
     }
 
     private int binarySearchRec(int[] array, int target, int left, int right) {
-        
-        if(right < left)
+
+        if (right < left)
             return -1;
 
         int middle = (left + right) / 2;
@@ -22,8 +22,8 @@ public class Search {
 
         if (target < array[middle])
             return binarySearchRec(array, target, left, middle - 1);
-        
-        return binarySearchRec(array, target, middle + 1, right)
+
+        return binarySearchRec(array, target, middle + 1, right);
     }
 
     public int binarySearch(int[] array, int target) {
@@ -70,5 +70,34 @@ public class Search {
             return ternarySearch(array, target, mid2 + 1, right);
 
         return ternarySearch(array, target, mid1 + 1, mid2 - 1);
+    }
+
+    public int jumpSearch(int[] array, int target) {
+        int blockSize = (int) Math.sqrt(array.length);
+        int start = 0;
+        int next = blockSize;
+
+        while (start < array.length && array[next - 1] < target) {
+            start = next;
+
+            next += blockSize;
+            if (next > array.length)
+                next = array.length;
+        }
+
+        for (var i = start; i < next; i++)
+            if (array[i] == target)
+                return i;
+        return -1;
+    }
+
+    public int exponentialSearch(int[] array, int target) {
+        int bound = 1;
+        while (bound < array.length && array[bound] < target)
+            bound *= 2;
+
+        int left = bound / 2;
+        int right = Math.min(bound, array.length - 1);
+        return binarySearchRec(array, target, left, right);
     }
 }
