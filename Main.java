@@ -16,6 +16,7 @@ public class Main {
                 System.out.println(StringUtils.capitalize("today      is a great day"));
                 var result2 = StringUtils.areAnagrams("ABCD", "DBCA");
                 System.out.println(result2);
+                System.out.println(StringUtils.isPalindrome("HAKKAH"));
                 // var search = new Search();
                 // int numbers[] = { 7, 1, 3, 6, 5 };
                 // var index = search.exponentialSearch(numbers, 3);
