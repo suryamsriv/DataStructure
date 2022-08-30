@@ -14,6 +14,8 @@ public class Main {
                 var result = StringUtils.getMaxOccuringChar("Trees are beautiful");
                 System.out.println(result);
                 System.out.println(StringUtils.capitalize("today      is a great day"));
+                var result2 = StringUtils.areAnagrams("ABCD", "DBCA");
+                System.out.println(result2);
                 // var search = new Search();
                 // int numbers[] = { 7, 1, 3, 6, 5 };
                 // var index = search.exponentialSearch(numbers, 3);
