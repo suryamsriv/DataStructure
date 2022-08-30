@@ -95,7 +95,7 @@ public class StringUtils {
     }
 
     public static String capitalize(String sentence) {
-        if (sentence.trim().isEmpty())
+        if (sentence == null || sentence.trim().isEmpty())
             return "";
 
         String[] words = sentence
