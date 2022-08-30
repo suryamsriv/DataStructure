@@ -76,6 +76,9 @@ public class StringUtils {
         // frequencies.put(ch, 1);
         // }
 
+        if (str.isEmpty() || str == null)
+            throw new IllegalArgumentException();
+
         final int ASCII_SIZE = 256;
         int frequencies[] = new int[ASCII_SIZE];
         for (var ch : str.toCharArray())
