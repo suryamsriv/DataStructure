@@ -11,6 +11,8 @@ public class Main {
                 System.out.println(StringUtils.reverseWords("Trees are beautiful"));
                 System.out.println(StringUtils.areRotations("ABCD", "DABC"));
                 System.out.println(StringUtils.removeDuplicates("Trees are beautiful"));
+                var result = StringUtils.getMaxOccuringChar("Trees are beautiful");
+                System.out.println(result);
                 // var search = new Search();
                 // int numbers[] = { 7, 1, 3, 6, 5 };
                 // var index = search.exponentialSearch(numbers, 3);

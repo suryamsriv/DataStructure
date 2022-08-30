@@ -1,6 +1,8 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import javax.print.attribute.HashAttributeSet;
@@ -63,5 +65,29 @@ public class StringUtils {
             }
         }
         return output.toString();
+    }
+
+    public static char getMaxOccuringChar(String str) {
+        // Map<Character, Integer> frequencies = new HashMap<>();
+        // for (var ch : str.toCharArray()) {
+        // if (frequencies.containsKey(ch))
+        // frequencies.replace(ch, frequencies.get(ch) + 1);
+        // else
+        // frequencies.put(ch, 1);
+        // }
+
+        final int ASCII_SIZE = 256;
+        int frequencies[] = new int[ASCII_SIZE];
+        for (var ch : str.toCharArray())
+            frequencies[ch]++;
+
+        int max = 0;
+        char result = ' ';
+        for (var i = 0; i < frequencies.length; i++)
+            if (frequencies[i] > max) {
+                max = frequencies[i];
+                result = (char) i;
+            }
+        return result;
     }
 }
