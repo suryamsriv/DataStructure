@@ -12,6 +12,7 @@ public class Main {
                 tree.insert(20);
                 tree.insert(8);
                 tree.insert(2);
+                System.out.println(tree.height());
 
                 // int count = StringUtils.countVowels("Hello World");
                 // System.out.println(StringUtils.reverse("Hello"));
