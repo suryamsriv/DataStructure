@@ -1,5 +1,7 @@
 package Revision;
 
+import javax.lang.model.util.ElementScanner6;
+
 public class BinaryTree {
     public class Node {
         private int value;
@@ -40,5 +42,18 @@ public class BinaryTree {
                 current = current.rightChild;
             }
         }
+    }
+
+    public boolean find(int item) {
+        var current = root;
+        while (current.value != item) {
+            if (item < current.value)
+                current = current.leftChild;
+            else if (item > current.value)
+                current = current.rightChild;
+            else
+                return true;
+        }
+        return false;
     }
 }
