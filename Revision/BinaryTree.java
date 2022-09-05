@@ -74,4 +74,38 @@ public class BinaryTree {
         traversePostOrder(root.rightChild);
         System.out.println(root.value);
     }
+
+    public int height(Node root) {
+        if(root == null)
+            reuturn -1;
+        if (root.leftChild == null && root.rightChild == null)
+            return 0;
+        return 1 + Math.max(height(root.leftChild), height(root.rightChild));
+    }
+
+    private boolean isLeaf(Node node) {
+        return node.leftChild == null && node.rightChild == null;
+    }
+
+    public int min(Node root) {
+        if (isLeaf(root))
+            return root.value;
+
+        var left = min(root.leftChild);
+        var right = min(root.rightChild);
+
+        return Math.min(Math.min(left, right), root.value);
+    }
+
+    public int minBST() {
+        if (root == null)
+            throw new IllegalStateException();
+        var current = root;
+        var last = current;
+        while (current != null) {
+            last = current;
+            current = current.leftChild;
+        }
+        return last.value;
+    }
 }
