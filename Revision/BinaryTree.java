@@ -108,4 +108,20 @@ public class BinaryTree {
         }
         return last.value;
     }
+
+    public boolean equals(BinaryTree other) {
+        return equals(root, other.root);
+    }
+
+    private boolean equals(Node first, Node second) {
+        if (first == null && second == null)
+            return true;
+
+        if (first != null && second != null)
+            return first.value == second.value
+                    && equals(first.leftChild, second.leftChild)
+                    && equals(first.rightChild, second.rightChild);
+
+        return false;
+    }
 }
