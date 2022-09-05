@@ -110,6 +110,8 @@ public class BinaryTree {
     }
 
     public boolean equals(BinaryTree other) {
+        if (other == null)
+            return false;
         return equals(root, other.root);
     }
 
@@ -123,5 +125,20 @@ public class BinaryTree {
                     && equals(first.rightChild, second.rightChild);
 
         return false;
+    }
+
+    public boolean isBST() {
+        return isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+    private boolean isBST(Node root, int min, int max) {
+        if (root == null)
+            return true;
+
+        if (root.value < min || root.value > max)
+            return false;
+
+        return isBST(root.leftChild, min, root.value - 1)
+                && isBST(root.rightChild, root.value + 1, max);
     }
 }
