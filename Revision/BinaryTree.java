@@ -1,5 +1,7 @@
 package Revision;
 
+import java.util.ArrayList;
+
 import javax.lang.model.util.ElementScanner6;
 
 public class BinaryTree {
@@ -140,5 +142,24 @@ public class BinaryTree {
 
         return isBST(root.leftChild, min, root.value - 1)
                 && isBST(root.rightChild, root.value + 1, max);
+    }
+
+    public ArrayList<Integer> getNodesAtDistance(int distance) {
+        var list = new ArrayList<Integer>();
+        getNodesAtDistance(root, distance, list);
+        return list;
+    }
+
+    private void getNodesAtDistance(Node root, int distance, ArrayList list) {
+        if (root == null)
+            return;
+
+        if (distance == 0) {
+            list.add(root.value);
+            return;
+        }
+
+        getNodesAtDistance(root.leftChild, distance - 1, list);
+        getNodesAtDistance(root.rightChild, distance - 1, list);
     }
 }
