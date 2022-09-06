@@ -1,5 +1,7 @@
 package Revision;
 
+import java.util.ArrayList;
+
 import javax.lang.model.util.ElementScanner6;
 
 public class BinaryTree {
@@ -75,9 +77,13 @@ public class BinaryTree {
         System.out.println(root.value);
     }
 
-    public int height(Node root) {
-        if(root == null)
-            reuturn -1;
+    public int height() {
+        return height(root);
+    }
+
+    private int height(Node root) {
+        if (root == null)
+            return -1;
         if (root.leftChild == null && root.rightChild == null)
             return 0;
         return 1 + Math.max(height(root.leftChild), height(root.rightChild));
@@ -140,5 +146,31 @@ public class BinaryTree {
 
         return isBST(root.leftChild, min, root.value - 1)
                 && isBST(root.rightChild, root.value + 1, max);
+    }
+
+    public ArrayList<Integer> getNodesAtDistance(int distance) {
+        var list = new ArrayList<Integer>();
+        getNodesAtDistance(root, distance, list);
+        return list;
+    }
+
+    private void getNodesAtDistance(Node root, int distance, ArrayList list) {
+        if (root == null)
+            return;
+
+        if (distance == 0) {
+            list.add(root.value);
+            return;
+        }
+
+        getNodesAtDistance(root.leftChild, distance - 1, list);
+        getNodesAtDistance(root.rightChild, distance - 1, list);
+    }
+
+    public void traverseLevelOrder() {
+        for (var i = 0; i <= height(); i++) {
+            for (var value : getNodesAtDistance(i))
+                System.out.println(value);
+        }
     }
 }
