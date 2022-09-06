@@ -77,9 +77,13 @@ public class BinaryTree {
         System.out.println(root.value);
     }
 
-    public int height(Node root) {
-        if(root == null)
-            reuturn -1;
+    public int height() {
+        return height(root);
+    }
+
+    private int height(Node root) {
+        if (root == null)
+            return -1;
         if (root.leftChild == null && root.rightChild == null)
             return 0;
         return 1 + Math.max(height(root.leftChild), height(root.rightChild));
@@ -161,5 +165,12 @@ public class BinaryTree {
 
         getNodesAtDistance(root.leftChild, distance - 1, list);
         getNodesAtDistance(root.rightChild, distance - 1, list);
+    }
+
+    public void traverseLevelOrder() {
+        for (var i = 0; i <= height(); i++) {
+            for (var value : getNodesAtDistance(i))
+                System.out.println(value);
+        }
     }
 }
